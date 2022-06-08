@@ -1,0 +1,33 @@
+div.avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-bottom: 1em;
+  width: 98%;
+}
+
+@media (max-width: 642px) {
+  div.avatar {
+    display: none;
+  }
+}
+
+@media (max-height: 524px) {
+  div.avatar {
+    display: none;
+  }
+}
+
+div.avatar div {
+  width: 48px;
+}
+
+div.avatar div img {
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  width: inherit;
+  max-height: 48px;
+  min-height: 16px;
+  max-width: 48px;
+  min-width: 16px;
+}

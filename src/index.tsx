@@ -1,3 +1,4 @@
+import { Avatar } from './components/Avatar';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -14,6 +15,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Root />
+      <Avatar />
     </BrowserRouter>
   </React.StrictMode>,
 );

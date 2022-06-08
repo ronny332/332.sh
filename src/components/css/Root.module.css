@@ -3,8 +3,8 @@ div.root {
   display: flex;
   flex: 1;
   flex-direction: column;
-  height: 90vh;
-  margin: 10vh auto 0 auto;
+  height: 80vh;
+  margin: 8vh auto 0 auto;
   max-width: 520px;
   width: 90%;
 }
