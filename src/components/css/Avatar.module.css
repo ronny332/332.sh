@@ -22,6 +22,53 @@ div.avatar div {
   width: 48px;
 }
 
+div.avatar {
+  animation-duration: 1.5s;
+  animation-name: opacity;
+  animation-timing-function: ease-in;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div > img {
+  animation-duration: 0.5s;
+  animation-name: grayScaleOn;
+  animation-timing-function: ease-in;
+  filter: grayscale(100%);
+}
+
+div > a > img {
+  animation-duration: 0.5s;
+  animation-name: grayScaleOff;
+  animation-timing-function: ease-out;
+  filter: grayscale(0%);
+}
+
+@keyframes grayScaleOn {
+  0% {
+    filter: grayscale(0%);
+  }
+  1000% {
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes grayScaleOff {
+  100% {
+    filter: grayscale(0%);
+  }
+  0% {
+    filter: grayscale(100%);
+  }
+}
+
 div.avatar div img {
   border: 1px solid var(--accent-color);
   border-radius: 50%;
