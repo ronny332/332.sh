@@ -1,0 +1,16 @@
+div.root {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 90vh;
+  margin: 10vh auto 0 auto;
+  max-width: 520px;
+  width: 90%;
+}
+
+@media (max-width: 580px) {
+  div.root {
+    margin-top: 0;
+  }
+}

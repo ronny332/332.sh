@@ -1,0 +1,11 @@
+{
+  "extends": "es/browser",
+  "overrides": [
+    {
+      "files": ["src/**/*.ts", "src/**/*.tsx"],
+      "rules": {
+        "comma-dangle": ["error", "always-multiline"]
+      }
+    }
+  ]
+}

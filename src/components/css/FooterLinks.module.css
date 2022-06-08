@@ -1,0 +1,44 @@
+div.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 360px) {
+  div.footer-links {
+    flex-direction: column;
+    gap: .6rem;
+  }
+}
+
+div.footer-links a:hover::before {
+  color: var(--links-spacing-color);
+  content: '$ ';
+  width: var(--links-spacing);
+}
+
+div.footer-links a:active, div.footer-links a:hover {
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.footer-links a {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  color: var(--accent-color);
+  display: flex;
+  font-size: 0.9rem;
+  opacity: 1;
+  padding-left: var(--links-spacing);
+  text-decoration: none;
+}

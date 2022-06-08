@@ -1,0 +1,22 @@
+:root {
+  --accent-color: #8a8a8a;
+  --construction-color: #f5bb00;
+  --links-spacing: 0.6rem;
+  --links-spacing-color: #646464;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: no-repeat #454545;
+  background-size: cover;
+  color: var(--accent-color);
+  font-family: sans-serif;
+  margin: 0;
+  min-width: 320px;
+}
+
+@font-face {
+  font-family: 'QuinqueFive';
+  src: url('../woff/quinquefive.woff') format('woff');
+}
