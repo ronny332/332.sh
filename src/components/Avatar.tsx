@@ -1,4 +1,5 @@
 import avatar from '../assets/jpg/avatar.jpg';
+import { BrowserView } from 'react-device-detect';
 import React from 'react';
 import styles from './css/Avatar.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Avatar: React.FC = () => {
   const location = useLocation().pathname;
   const navigate = useNavigate();
+
   const path = '/~ronny';
 
   const onClick = async (event: Event): Promise<void> => {
@@ -20,11 +22,13 @@ const Avatar: React.FC = () => {
   const anchor = React.createElement('a', anchorAttr, image);
 
   return (
-    <div className={ styles.avatar }>
-      <div>
-        { anchor }
+    <BrowserView>
+      <div className={ styles.avatar }>
+        <div>
+          { anchor }
+        </div>
       </div>
-    </div>
+    </BrowserView>
   );
 };
 
