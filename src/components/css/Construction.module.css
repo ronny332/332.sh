@@ -3,9 +3,11 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   padding: 10% 5%;
   width: 100%;
+  transition: filter 1s ease-in-out;
 }
 
 @media (max-width: 580px) {
@@ -29,12 +31,12 @@
   }
 }
 
-.head-line p:first-child {
-  color: #fff;
+.head-line {
+  color: rgb(255, 255, 255);
+  font-family: 'OpenSans';
 }
 
 .head-line p {
-  color: var(--construction-color);
   filter: drop-shadow(0em 0em 1em rgb(0 0 0 / 0.5));
   font-size: 2rem;
   margin: 0;
@@ -42,26 +44,44 @@
 }
 
 .sub-line {
+  color: #fff;
   display: flex;
   flex-direction: column;
 }
 
-.sub-line p:last-child {
-  color: #fff;
-}
-
 .sub-line p {
-  color: var(--construction-color);
   font-family: 'QuinqueFive';
   font-size: 0.3rem;
   text-align: center;
 }
 
+.construction div.head-line p:last-child,
+.construction div.sub-line p:first-child {
+  color: var(--construction-color);
+  transition: color 1s;
+}
+
 .construction svg {
   display: flex;
   filter: brightness(0.9) saturate(1.5) drop-shadow(0em 0em 3em rgb(0 0 0 / 1));
-  height: 60%;
+  height: 70%;
   margin: 5% auto;
   transform: rotateY(180deg);
   width: 50%;
+}
+
+.construction.ronny div.head-line p:last-child,
+.construction.ronny div.sub-line p:first-child {
+  color: var(--ronny332-color);
+}
+
+.construction svg path {
+  fill: var(--construction-color);
+  stroke: #000;
+  transition: all 1s;
+}
+
+.construction.ronny svg path {
+  fill: var(--ronny332-color);
+  stroke: #000;
 }
