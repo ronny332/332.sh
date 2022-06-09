@@ -21,7 +21,7 @@ body {
   src: url('../woff/quinquefive.woff') format('woff');
 }
 
-div#app {
+#app {
   display: flex;
   flex-direction: column;
   height: 100vh;

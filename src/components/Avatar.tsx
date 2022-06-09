@@ -1,17 +1,28 @@
 import avatar from '../assets/jpg/avatar.jpg';
 import React from 'react';
 import styles from './css/Avatar.module.css';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Avatar: React.FC = () => {
-  const link = <img src={ avatar } alt='' />;
   const location = useLocation().pathname;
-  const to = '/~ronny';
+  const navigate = useNavigate();
+  const path = '/~ronny';
+
+  const onClick = async (event: Event): Promise<void> => {
+    event.preventDefault();
+    navigate(path);
+  };
+
+  const anchorAttr = location !== path ? { href: path, onClick } : null;
+  const imageAttr = { src: avatar, className: anchorAttr?.href ? '' : styles.disabled, alt: path };
+
+  const image = React.createElement('img', imageAttr);
+  const anchor = React.createElement('a', anchorAttr, image);
 
   return (
     <div className={ styles.avatar }>
       <div>
-        { location !== to ? <Link to={ to }>{link}</Link> : link }
+        { anchor }
       </div>
     </div>
   );

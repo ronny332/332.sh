@@ -1,4 +1,4 @@
-div.root {
+.root {
   align-items: center;
   display: flex;
   flex: 1;
@@ -10,7 +10,7 @@ div.root {
 }
 
 @media (max-width: 580px) {
-  div.root {
+  .root {
     margin-top: 0;
   }
 }

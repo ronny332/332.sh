@@ -1,4 +1,4 @@
-div.construction {
+.construction {
   border: 1px solid var(--accent-color);
   border-radius: 1rem;
   display: flex;
@@ -9,55 +9,55 @@ div.construction {
 }
 
 @media (max-width: 580px) {
-  div.construction {
-    margin-top: .5rem;
-    width: 98%
+  .construction {
+    margin-top: 0.5rem;
+    width: 98%;
   }
 }
 
-div.headline {
+.head-line {
   display: flex;
-  gap: .3em;
+  gap: 0.3em;
   flex-direction: row;
   justify-content: center;
 }
 
 @media (max-width: 400px) {
-  div.headline {
+  .head-line {
     flex-direction: column;
     text-align: center;
   }
 }
 
-div.headline p:first-child {
+.head-line p:first-child {
   color: #fff;
 }
 
-div.headline p {
+.head-line p {
   color: var(--construction-color);
-  filter: drop-shadow(0em 0em 1em rgb(0 0 0 / .5));
+  filter: drop-shadow(0em 0em 1em rgb(0 0 0 / 0.5));
   font-size: 2rem;
   margin: 0;
   text-transform: uppercase;
 }
 
-div.subline {
+.sub-line {
   display: flex;
   flex-direction: column;
 }
 
-div.subline p:last-child {
+.sub-line p:last-child {
   color: #fff;
 }
 
-div.subline p {
+.sub-line p {
   color: var(--construction-color);
   font-family: 'QuinqueFive';
   font-size: 0.3rem;
   text-align: center;
 }
 
-svg.construction {
+.construction svg {
   display: flex;
   filter: brightness(0.9) saturate(1.5) drop-shadow(0em 0em 3em rgb(0 0 0 / 1));
   height: 60%;

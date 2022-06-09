@@ -1,75 +1,28 @@
 div.avatar {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   padding-bottom: 1em;
   width: 98%;
 }
 
 @media (max-width: 642px) {
-  div.avatar {
+  .avatar {
     display: none;
   }
 }
 
 @media (max-height: 524px) {
-  div.avatar {
+  .avatar {
     display: none;
   }
 }
 
-div.avatar div {
+.avatar div {
   width: 48px;
 }
 
-div.avatar {
-  animation-duration: 1.5s;
-  animation-name: opacity;
-  animation-timing-function: ease-in;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-div > img {
-  animation-duration: 0.5s;
-  animation-name: grayScaleOn;
-  animation-timing-function: ease-in;
-  filter: grayscale(100%);
-}
-
-div > a > img {
-  animation-duration: 0.5s;
-  animation-name: grayScaleOff;
-  animation-timing-function: ease-out;
-  filter: grayscale(0%);
-}
-
-@keyframes grayScaleOn {
-  0% {
-    filter: grayscale(0%);
-  }
-  1000% {
-    filter: grayscale(100%);
-  }
-}
-
-@keyframes grayScaleOff {
-  100% {
-    filter: grayscale(0%);
-  }
-  0% {
-    filter: grayscale(100%);
-  }
-}
-
-div.avatar div img {
+.avatar img {
   border: 1px solid var(--accent-color);
   border-radius: 50%;
   width: inherit;
@@ -77,4 +30,13 @@ div.avatar div img {
   min-height: 16px;
   max-width: 48px;
   min-width: 16px;
+}
+
+.avatar img {
+  filter: grayscale(0%);
+  transition: all 0.5s linear;
+}
+
+.avatar img.disabled {
+  filter: grayscale(100%);
 }
